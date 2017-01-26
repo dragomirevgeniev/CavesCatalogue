@@ -1,0 +1,119 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="bg" lang="bg">
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="stylesheet" href="caves.css" type="text/css" />
+<link rel="icon" href="images/favicon.ico" />
+<script src="js/validateForm.js"></script>
+
+<title>Каталог на пещерите в България </title>
+
+</head>
+
+<body>
+<!-- wrap starts here -->
+<div id="wrap">
+
+	<div id="top-bg"></div>
+				
+	<!--header -->
+	<div id="header">			
+				
+		<h1 id="logo-text"><a href="index.html" title="">Каталог на пещерите в България</span></a></h1>		
+		<p id="slogan">"Опознай Родината, за да я обикнеш!" - Алеко Константинов</p>		
+			
+	<!--header ends-->					
+	</div>
+	
+	<div id="header-photo"></div>	
+		
+	<!-- navigation starts-->	
+	<div  id="nav">
+		<ul>
+			<li><a href="index.html">Начало</a></li>
+			<li><a href="caves.html">Пещери</a></li>
+			<li id="current"><a href="contact.html">Контакти</a></li>
+			<li><a href="info.html">За нас</a></li>		
+		</ul>
+	<!-- navigation ends-->	
+	</div>					
+			
+	<!-- content-wrap starts -->
+	<div id="content-wrap">
+	
+		<!-- main starts -->
+		<div id="main">
+		
+			<h3>Свържете се с нас</h3>
+			<form id="contact_form" action="" method="POST" onsubmit="return validateForm();" enctype="multipart/form-data">
+				<div class="row">
+					<label class="required" for="name">Име</label>
+					<input id="name" name="name" type="text" value="Вашето име" size="30" /><br />
+					<span id="name_validation" class="error"></span>
+				</div>
+				<div class="row">
+					<label class="required" for="email">Ел. поща</label>
+					<input id="email" name="email" type="text" value="Вашата ел. поща" size="30" /><br />
+					<span id="email_validation" class="error"></span>
+				</div>
+				<div class="row">
+					<label class="required" for="message">Съобщение</label>
+					<textarea id="message" name="message" rows="7" cols="30"></textarea><br />
+					<span id="message_validation" class="error"></span>
+				</div>
+				<input class="button" type="submit" value="Изпращане" />
+			</form>
+
+		<!-- main ends -->	
+		</div>
+				
+		<div id="sidebar">
+			
+			<h3>Потърсете още...</h3>	
+			<form action="#" class="searchform">
+				<p>
+				<input name="search_query" class="textbox" type="text" />
+  				<input name="search" class="button" value="Search" type="submit" />
+				</p>			
+			</form>	
+					
+			<h3>Полезни страници</h3>
+			<ul class="sidemenu">
+				<li><a href="http://bgpeshteri.start.bg/">bgpeshteri.start.bg</a></li>
+				<li><a href="https://pochivka.bg/peshteri-bulgaria-f119">pochivka.bg</a></li>
+				<li><a href="https://www.edna.bg/svobodno-vreme/pochivka/naj-krasivite-peshteri-v-bylgariia-4639484">Най-красивите пещери в България</a></li>					
+			    <li><a href="https://bg.wikipedia.org/wiki/%D0%A1%D0%BF%D0%B8%D1%81%D1%8A%D0%BA_%D0%BD%D0%B0_%D0%BF%D0%B5%D1%89%D0%B5%D1%80%D0%B8%D1%82%D0%B5_%D0%B2_%D0%91%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D0%B8%D1%8F">Списък на пещерите в България(wiki)</a></li>
+			</ul>
+			
+			<h3>Спонсори</h3>
+            <ul class="sidemenu">
+               <li><a href="https://www.fmi.uni-sofia.bg/" title="ФМИ">
+               <strong>ФМИ</strong></a> <br />Факултет по математика и информатика към Софийски университет "Св. Климент Охридски"</li>  
+            </ul>
+				
+			<h3>Вечни мисли за природата</h3>
+			<p>
+				<blockquote>&quot;Природата не признава шеги; тя е винаги сериозна, е винаги строга; грешките и заблужденията произлизат от хората.&quot;
+				<p class="align-right">- Гьоте</blockquote></p>
+			
+				<blockquote>&quot;Радостта да виждаш и да разбираш е най-прекрасния дар на природата.&quot;
+				<p class="align-right">- Айнщайн</blockquote></p>
+			</p>
+									
+		<!-- sidebar ends -->		
+		</div>		
+		
+	<!-- content-wrap ends-->	
+	</div>
+		
+	<!-- footer starts -->		
+	<div id="footer-wrap">	
+		<div id="footer-bottom">		
+			<p>&copy; 2017 Драгомир Евгениев & Божидар Иванов</p>	
+<!-- footer ends-->
+</div>
+<!-- wrap ends here -->
+</div>
+
+</body>
+</html>

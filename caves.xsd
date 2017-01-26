@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  
+  <!--START Elements-->
+  <xs:element name="cavesCatalogue" type="CavesCatalogueType">
+    <xs:key name="regionsKey">
+      <xs:selector xpath="./regions/region" />
+      <xs:field xpath="@name" />
+    </xs:key>
+    <xs:keyref name="caveRegions" refer="regionsKey">
+      <xs:selector xpath="./caves/cave" />
+      <xs:field xpath="@region" />
+    </xs:keyref>
+  </xs:element>
+  <xs:element name="caves" type="CavesType" />
+  <xs:element name="cave" type="CaveType" />
+  <xs:element name="regions" type="RegionsType" />
+  <xs:element name="region" type="RegionType" />
+  <xs:element name="description" type="DescriptionType" />
+  <!--END Elements-->
+  
+  <!--START Attribute groups-->
+  <xs:attributeGroup name="CaveAttrib">
+    <xs:attribute name="name" use="required" type="CaveNameType" />
+    <xs:attribute name="length" use="required" type="xs:positiveInteger" />
+    <xs:attribute name="photo" use="required" type="PhotoType" />
+	<xs:attribute name="region" use="required" type="xs:string" />
+    <xs:attribute name="denivelation" use="optional" type="xs:positiveInteger" />
+    <xs:attribute name="geology" use="optional" type="GeologyType" />
+    <xs:attribute name="discoveryYear" use="optional" type="xs:positiveInteger" />
+    <xs:attribute name="difficulty" use="optional" type="DifficultyType" />
+  </xs:attributeGroup>
+  <!--END Attribute groups-->
+  
+  <!--START Simple types-->
+  <xs:simpleType name="DifficultyType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="лесна" />
+      <xs:enumeration value="средна" />
+      <xs:enumeration value="трудна" />
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="PhotoType">
+    <xs:restriction base="xs:string">
+      <xs:minLength value="3" />
+      <xs:maxLength value="255" />
+    </xs:restriction>
+  </xs:simpleType>
+  
+  <xs:simpleType name="DescriptionType">
+    <xs:restriction base="xs:string">
+      <xs:minLength value="20" />
+      <xs:maxLength value="1000" />
+    </xs:restriction>
+  </xs:simpleType>
+  
+  <xs:simpleType name="CaveNameType">
+    <xs:restriction base="xs:string">
+      <xs:minLength value="3" />
+      <xs:maxLength value="40" />
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="GeologyType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="карстова" />
+      <xs:enumeration value="първична" />
+      <xs:enumeration value="подводна" />
+      <xs:enumeration value="ерозионна" />
+      <xs:enumeration value="ледена" />
+      <xs:enumeration value="пропастна" />
+      <xs:enumeration value="свлачищна" />
+    </xs:restriction>
+  </xs:simpleType>
+  <!--END Simple types-->
+
+  <!--START Complex types-->
+  <xs:complexType name="CavesCatalogueType">
+    <xs:sequence>
+	  <xs:element ref="regions" />
+      <xs:element ref="caves" />
+    </xs:sequence>
+  </xs:complexType>
+  
+  <xs:complexType name="RegionsType">
+    <xs:sequence>
+      <xs:element ref="region" minOccurs="1" maxOccurs="unbounded" />
+    </xs:sequence>
+  </xs:complexType>
+  
+  <xs:complexType name="CavesType">
+    <xs:sequence>
+      <xs:element ref="cave" minOccurs="1" maxOccurs="unbounded" />
+    </xs:sequence>
+  </xs:complexType>
+  
+  <xs:complexType name="RegionType">
+	<xs:attribute name="name" use="required" type="xs:NCName"/>
+  </xs:complexType>
+  
+  <xs:complexType name="CaveType">
+    <xs:sequence>
+      <xs:element ref="description" />
+    </xs:sequence>
+    <xs:attributeGroup ref="CaveAttrib" />
+  </xs:complexType>
+  <!--END Complex types-->
+  
+</xs:schema>

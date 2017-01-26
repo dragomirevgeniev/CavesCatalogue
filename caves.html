@@ -1,0 +1,62 @@
+<html>
+<head>
+    <title>Каталог на пещерите в България </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="caves.css" type="text/css" />
+    <script src="js/caves.js"></script>
+	
+</head>
+<body onload="displayResult(1)">
+<div id="wrap">
+
+	<div id="top-bg"></div>
+				
+	<!--header -->
+	<div id="header">			
+				
+		<h1 id="logo-text"><a href="index.html" title="">Каталог на пещерите в България</span></a></h1>		
+		<p id="slogan">"Опознай Родината, за да я обикнеш!" - Алеко Константинов</p>		
+			
+	<!--header ends-->					
+	</div>
+	
+	<div id="header-photo"></div>	
+		
+	<!-- navigation starts-->	
+	<div id="nav">
+		<ul>
+			<li><a href="index.html">Начало</a></li>
+			<li id="current"><a href="caves.html">Пещери</a></li>
+			<li><a href="contact.html">Контакти</a></li>
+			<li><a href="info.html">За нас</a></li>		
+		</ul>
+	<!-- navigation ends-->	
+	</div>		
+	
+	<!-- content-wrap starts -->
+	<div id="content-wrap">
+		<!-- catalogue starts -->
+		<div id="catalogue">
+			<h3>Популярни пещери в България</h3><br/>
+			<input id="clickMe" type="button" value="Сортирай по име" onclick="displayResult(6)" />
+			<input id="clickMe" type="button" value="Сортирай по област" onclick="displayResult(5)" />
+			<input id="clickMe" type="button" value="Сортирай по тип" onclick="displayResult(3)" />		
+			<input id="clickMe" type="button" value="Сортирай по денивелация" onclick="displayResult(2)" />
+			<input id="clickMe" type="button" value="Сортирай по дължина" onclick="displayResult(4)" />
+			<div id="example"></div>
+		<!-- catalogue ends -->
+		</div>
+	<!-- content-wrap ends-->	
+	</div>
+		
+	<!-- footer starts -->		
+	<div id="footer-wrap">	
+		<div id="footer-bottom">		
+			<p>&copy; 2017 Драгомир Евгениев & Божидар Иванов</p>	
+<!-- footer ends-->
+</div>
+<!-- wrap ends here -->
+</div>
+
+</body>
+</html>
