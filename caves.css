@@ -84,20 +84,20 @@ th strong {
 }
 th {
 	background: #93BC0C url(images/nav.jpg) repeat-x;
-	height: 29px;
-	padding-left: 12px;
-	padding-right: 12px;
+	height: 24px;
+	padding-left: 10px;
+	padding-right: 10px;
 	color: #FFF;
 	text-align: left;
 	border-left: 1px solid #B6D59A;
 	border-bottom: solid 2px #FFF;
 }
 tr {
-	height: 30px;
+	height: 24px;
 }
 td {
-	padding-left: 7px;
-	padding-right: 7px;
+	padding-left: 6px;
+	padding-right: 6px;
 	border-left: 1px solid #E8E8E8;
 	border-bottom: 2px solid #DFDFDF;
 }
@@ -105,7 +105,7 @@ td.first,th.first {
 	border-left: 0px;
 }
 tr.row-a {
-	background: #F8F8F8;
+	background: #F5F5F5;
 }
 tr.row-b {
 	background: #EFEFEF;		
@@ -285,7 +285,7 @@ input.button {
 	border-left: 1px solid #A7D101;
 	border-bottom: none;
 	color: #FFF;
-	font: bold 13px/2.8em "Century Gothic", "Trebuchet MS", Helvetica, Arial, Geneva, sans-serif;
+	font: bold 13px/2.9em "Century Gothic", "Trebuchet MS", Helvetica, Arial, Geneva, sans-serif;
 	text-transform: uppercase;
 	text-decoration: none;	
 	letter-spacing: 1px;
@@ -311,12 +311,10 @@ input.button {
 	text-transform: none;
 	padding: 10px 0 0px 10px; 			
 }
-
 #main h3 {
 	font: bold 1.3em 'Trebuchet MS', Tahoma, Sans-serif;
 	color: #8C9F0D; 		
 }
-
 #main p {
 	font: 1.3em 'Trebuchet MS', Tahoma, Sans-serif;
 	color: #555555; 		
@@ -324,22 +322,10 @@ input.button {
 
 /* Catalogue */
 #catalogue {
-	float: center;
-	width: 90%; 
-	padding: 20x 0 0 0; margin: 0 0 0 10px;
+	float: left;
+	width: 100%;
+	padding: 15px 0 0 0; margin: 0 0 0 1px;
 	display: inline;
-}
-
-#catalogue h2 {
-	font: normal 1.9em 'Trebuchet MS', Tahoma, Sans-serif;
-	color: #85970C; 
-	text-transform: none;
-	padding: 20px 0 0px 10px; 			
-}
-
-#catalogue h3 {
-	font: bold 1.7em 'Trebuchet MS', Tahoma, Sans-serif;
-	color: #8C9F0D; 		
 }
 
 #catalogue input {
@@ -352,8 +338,13 @@ input.button {
 	color : #ffffff;
 	background: url(images/nav.jpg) repeat-x;	
 	display: inline;
-	margin: 5px 5px 5px 5px;
+	margin: 4px 4px 4px 4px;
 }
+
+/* Example */	
+#example {
+	font: 1.0em 'Trebuchet MS', Tahoma, Sans-serif;		
+}	
 
 /* Contact Validation */	
 #email_validation, #name_validation {
@@ -372,11 +363,6 @@ span.error {
 .row {
   margin:5px;
 }
-
-/* Example */	
-#example {
-	font: 1.1em 'Trebuchet MS', Tahoma, Sans-serif;		
-}	
 
 /* Sidebar */	
 #sidebar {

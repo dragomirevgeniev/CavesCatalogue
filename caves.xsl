@@ -3,13 +3,13 @@
 
 <xsl:template match="/">
     <table>
-      <xsl:for-each select="cavesCatalogue/caves/cave">	
+      <xsl:for-each select="cavesCatalogue/caves/cave">
 	  <tr>
         <th class="first">Име</th>
         <th>Област</th>
         <th>Тип</th>
         <th>Денивелация</th>
-		<th>Дължина</th>
+		<th>Дължина(м)</th>
 		<th>Откриване</th>
 		<th>Снимка</th>
       </tr>

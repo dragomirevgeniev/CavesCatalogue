@@ -1,16 +1,16 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform"> 
 
 <xsl:template match="/">
     <table>
-      <xsl:for-each select="cavesCatalogue/caves/cave">
-	  <xsl:sort select="@name" data-type="text" order="ascending" />	  
+	<xsl:for-each select="cavesCatalogue/caves/cave">
+	  <xsl:sort select="@name" data-type="text" order="ascending" />
 	  <tr>
         <th class="first">Име</th>
         <th>Област</th>
         <th>Тип</th>
         <th>Денивелация</th>
-		<th>Дължина</th>
+		<th>Дължина(м)</th>
 		<th>Откриване</th>
 		<th>Снимка</th>
       </tr>
@@ -38,7 +38,7 @@
 			<td><font color="#8C9F0D">Описание:</font></td>
 			<td colspan="7"><xsl:value-of select="description"/><br/><br/></td>
 		</tr>
-      </xsl:for-each>
+    </xsl:for-each>
     </table>
 </xsl:template>
 </xsl:stylesheet> 

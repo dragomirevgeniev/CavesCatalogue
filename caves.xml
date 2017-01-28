@@ -1,14 +1,16 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <?xml-stylesheet type="text/xsl" href="caves.xsl"?>
 
-<cavesCatalogue>
+<cavesCatalogue xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.w3schools.com caves.xsd">
 
   <regions>
     <region name="Перник" />
-	<region name="Русе" />
-	<region name="Смолян" />
-	<region name="Ловеч" />
-	<region name="Враца" />
+	  <region name="Русе" />
+	  <region name="Смолян" />
+	  <region name="Ловеч" />
+	  <region name="Враца" />
+    <region name="Стара Загора" />
+    <region name="Бургас" />
   </regions>
 
   <caves>

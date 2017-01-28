@@ -15,30 +15,36 @@ function loadXMLDoc(filename){
 }
 
 function displayResult(number) {
-     xml = loadXMLDoc("caves.xml");
-     if(number == 1) {
-        xsl = loadXMLDoc("caves.xsl");
-     } else if (number == 2) {
-        xsl = loadXMLDoc("cavesSortByDen.xsl");
-     } else if (number == 3) {
-        xsl = loadXMLDoc("cavesSortByType.xsl");
-     } else if (number == 4) {
-        xsl = loadXMLDoc("cavesSortByLength.xsl");
-     } else if (number == 5) {
-        xsl = loadXMLDoc("cavesSortByRegion.xsl");
-     } else if (number == 6) {
-        xsl = loadXMLDoc("cavesSortByName.xsl");
-     }
-
+    xml = loadXMLDoc("caves.xml");
+	switch(number) {
+		case 1:
+			xsl = loadXMLDoc("caves.xsl"); 
+        break;
+		case 2:
+			xsl = loadXMLDoc("cavesSortByName.xsl"); 
+        break;
+		case 3:
+			xsl = loadXMLDoc("cavesSortByRegion.xsl"); 
+		break;
+		case 4:
+			xsl = loadXMLDoc("cavesSortByType.xsl"); 
+        break;
+		case 5:
+			xsl = loadXMLDoc("cavesSortByDen.xsl"); 
+		break;
+		case 6:
+			xsl = loadXMLDoc("cavesSortByLength.xsl"); 
+        break;
+	} 
 
     if (window.ActiveXObject || xhttp.responseType == "msxml-document") { // code for IE
-      ex = xml.transformNode(xsl);
-      document.getElementById("example").innerHTML = ex;
+		ex = xml.transformNode(xsl);
+		document.getElementById("example").innerHTML = ex;
     } else if (document.implementation && document.implementation.createDocument) { // code for Chrome, Firefox, Opera, etc.
-      xsltProcessor = new XSLTProcessor();
-      xsltProcessor.importStylesheet(xsl);
-      resultDocument = xsltProcessor.transformToFragment(xml, document);
-      document.getElementById("example").innerHTML = "";
-      document.getElementById("example").appendChild(resultDocument);
+		xsltProcessor = new XSLTProcessor();
+		xsltProcessor.importStylesheet(xsl);
+		resultDocument = xsltProcessor.transformToFragment(xml, document);
+		document.getElementById("example").innerHTML = "";
+		document.getElementById("example").appendChild(resultDocument);
     }
 }

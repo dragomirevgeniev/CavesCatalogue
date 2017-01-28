@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 
 <xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
-  
+
   <!--START Elements-->
   <xs:element name="cavesCatalogue" type="CavesCatalogueType">
     <xs:key name="regionsKey">
@@ -19,20 +19,20 @@
   <xs:element name="region" type="RegionType" />
   <xs:element name="description" type="DescriptionType" />
   <!--END Elements-->
-  
+
   <!--START Attribute groups-->
   <xs:attributeGroup name="CaveAttrib">
-    <xs:attribute name="name" use="required" type="CaveNameType" />
+	  <xs:attribute name="name" use="required" type="CaveNameType" />
     <xs:attribute name="length" use="required" type="xs:positiveInteger" />
     <xs:attribute name="photo" use="required" type="PhotoType" />
-	<xs:attribute name="region" use="required" type="xs:string" />
+    <xs:attribute name="region" use="required" type="xs:string" />
     <xs:attribute name="denivelation" use="optional" type="xs:positiveInteger" />
     <xs:attribute name="geology" use="optional" type="GeologyType" />
     <xs:attribute name="discoveryYear" use="optional" type="xs:positiveInteger" />
     <xs:attribute name="difficulty" use="optional" type="DifficultyType" />
   </xs:attributeGroup>
   <!--END Attribute groups-->
-  
+
   <!--START Simple types-->
   <xs:simpleType name="DifficultyType">
     <xs:restriction base="xs:string">
@@ -48,14 +48,14 @@
       <xs:maxLength value="255" />
     </xs:restriction>
   </xs:simpleType>
-  
+
   <xs:simpleType name="DescriptionType">
     <xs:restriction base="xs:string">
       <xs:minLength value="20" />
       <xs:maxLength value="1000" />
     </xs:restriction>
   </xs:simpleType>
-  
+
   <xs:simpleType name="CaveNameType">
     <xs:restriction base="xs:string">
       <xs:minLength value="3" />
@@ -79,27 +79,27 @@
   <!--START Complex types-->
   <xs:complexType name="CavesCatalogueType">
     <xs:sequence>
-	  <xs:element ref="regions" />
+      <xs:element ref="regions" />
       <xs:element ref="caves" />
     </xs:sequence>
   </xs:complexType>
-  
+
   <xs:complexType name="RegionsType">
     <xs:sequence>
       <xs:element ref="region" minOccurs="1" maxOccurs="unbounded" />
     </xs:sequence>
   </xs:complexType>
-  
+
   <xs:complexType name="CavesType">
     <xs:sequence>
       <xs:element ref="cave" minOccurs="1" maxOccurs="unbounded" />
     </xs:sequence>
   </xs:complexType>
-  
+
   <xs:complexType name="RegionType">
-	<xs:attribute name="name" use="required" type="xs:NCName"/>
+  	<xs:attribute name="name" use="required" type="xs:string"/>
   </xs:complexType>
-  
+
   <xs:complexType name="CaveType">
     <xs:sequence>
       <xs:element ref="description" />
@@ -107,5 +107,5 @@
     <xs:attributeGroup ref="CaveAttrib" />
   </xs:complexType>
   <!--END Complex types-->
-  
+
 </xs:schema>
